@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <style>
+        li {
+            list-style-type: none;
+            border: 1px solid lightgray;
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bolder;
+            font-size: larger;
+        }
+        div {
+            width: 450px;
+            height: 200px;
+            margin-left: 50px;
+            border-radius: 5px;
+        }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#" onclick="changeBackgroundColor('green')">Green</a></li>
+      <li><a href="#" onclick="changeBackgroundColor('orange')">Orange</a></li>
+      <li><a href="#" onclick="changeBackgroundColor('purple')">Purple</a></li>
+      </li>
+    </ul>
+    <div></div>
+    <script>
+      function changeBackgroundColor(color) {
+        var body = document.querySelector("div");
+        body.style.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>
