@@ -1,5 +1,8 @@
 var toNow = new Date();
-var firstDay = new Date("2020-10-06");
+var firstDay = prompt("첫 만남은 언제인가요?", "YYYYMMDD");
+firstDay = new Date(
+  `${firstDay.slice(0, 4)}-${firstDay.slice(4, 6)}-${firstDay.slice(6, 8)}`
+);
 var toFirst = firstDay.getTime();
 var toNow = toNow.getTime();
 var passedTime = toNow - toFirst;
@@ -20,8 +23,9 @@ function set(day) {
   } else {
     date = someday.getDate();
   }
-  param = "#date" + day;
-  document.querySelector(param).innerHTML = `${year}년 ${month}월 ${date}일`;
+  document.querySelector(
+    "#date" + day
+  ).innerHTML = `${year}년 ${month}월 ${date}일`;
 }
 
 set(100);
